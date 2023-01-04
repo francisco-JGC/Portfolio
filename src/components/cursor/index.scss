@@ -1,0 +1,49 @@
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background-color: #2696e8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696e8,
+                0 0 60px #2696e8,
+                0 0 10px #2696e8;
+    animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
+    
+    &:before{
+        content: '';
+        position: absolute;
+        background-color: #2696e8;
+        width: 50px;
+        height: 50px;
+        opacity: .2;
+        transform: translate(-30%, -30%);
+        border-radius: 50%;
+    }
+}
+
+.cursor--click {
+    animation: none;
+    background-color: #bd0054;
+    box-shadow: 0 0 20px #bd0054,
+                0 0 60px #bd0054,
+                0 0 10px #bd0054;
+    &:before{
+        width: 100px;
+        height: 100px;
+        opacity: .1;
+        transform: scale(0) !important;
+        transition: all .2s ease-in-out;
+    }
+}
+
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
