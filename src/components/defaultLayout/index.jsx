@@ -1,9 +1,12 @@
 import './index.scss'
+import BackgroundLayout from '../backgroundLayout'
 
 export default function DefaultLayout ({ children }) {
     return (
-        <div className="default-layout">
-            {children}
-        </div>
+        <BackgroundLayout>
+            <div className="default-layout">
+                {children}
+            </div>
+        </BackgroundLayout>
     )
 }
