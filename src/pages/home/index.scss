@@ -1,0 +1,22 @@
+@use '../../sass/index' as *;
+
+.content-home-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .content-left, .content-right{
+        width: 50%;
+        height: 100%;
+    }
+
+    .content-left {
+        h1{
+            font-size: 3rem;
+        }
+        .dev{
+            color: $primary-color;
+        }
+    }
+}
