@@ -78,3 +78,86 @@
         }
     }
 }
+
+// responsive
+@include desktop {
+    .content-home-page{
+        .content-left{
+            h1{
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .content-home-page{
+        flex-direction: column;
+        height: auto;
+
+        .content-left, .content-right{
+            width: 100%;
+            height: auto;
+        }
+
+        .content-left{
+            h1{
+                font-size: 2.2rem;
+            }
+        }
+
+        .content-right{
+            .content-info{
+                .decorative-point{
+                    top: 0;
+                    left: 0;
+                }
+                .ticket-info{
+                    position: relative;
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .content-home-page{
+        .content-left{
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content-home-page{
+        .content-left{
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 971px){
+    .content-home-page{
+        .content-left{
+            h1{
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 853px){
+    .content-home-page{
+        .content-left{
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+

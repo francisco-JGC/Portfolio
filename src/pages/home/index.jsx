@@ -21,7 +21,6 @@ export default function HombePage () {
                     </p>
                   </div>
                   <br />
-                  <br />
                   {/* download cv button */}
                   <DownloadCV />
               </div>
