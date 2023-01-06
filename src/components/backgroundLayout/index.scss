@@ -19,8 +19,6 @@
       border-radius: 50%;
       position: absolute;
       background: $primary-color;
-      filter: blur(10px);
-      -webkit-filter: blur(10px);
 
       &:nth-child(1){
         width: 600px;
@@ -50,7 +48,6 @@
 
   .background-layout-content{
     width: 100%;
-    height: 100vh;
     min-height: 100vh;
     position: relative;
     z-index: 1;
