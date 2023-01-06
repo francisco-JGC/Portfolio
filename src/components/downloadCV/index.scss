@@ -1,0 +1,37 @@
+@use '../../sass/index' as *;
+
+.download-cv{
+    background: $primary-color;
+    padding: .5rem 1rem;
+    border-radius: $border-radius;
+    color: $white;
+    box-shadow: $box-shadow;
+    transition: .3s ease-in-out;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: 'Size: 280 KB';
+        position: absolute;
+        inset: 0;
+        background: $background-div;
+        color: $primary-color;
+        padding: .5rem 1rem;
+        border-radius: $border-radius;
+        font-size: .8rem;
+        transform: translateY(-100%);
+        transition: .3s ease-in-out;
+    }
+
+    &:hover::before{
+        transform: translateY(0);
+        border-radius: none;
+    }
+
+    &:active{
+        transition: .1s ease-in-out;
+        transform: scale(.9);
+    }
+}
