@@ -5,6 +5,8 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
 
     .content-left, .content-right{
         width: 50%;
@@ -15,8 +17,64 @@
         h1{
             font-size: 3rem;
         }
+        .text{
+            line-height: 1.3;
+        }
         .dev{
             color: $primary-color;
+        }
+    }
+
+    .content-right{
+        position: relative;
+        img{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-info{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            
+            .decorative-point{
+                position: absolute;
+                left: 0;
+                top: 10%;
+                opacity: .8;
+            }
+            
+            .ticket-info{
+                position: absolute;
+            }
+            .ticket-info:nth-child(1){
+                left: 15%;
+                top: 12%;
+            }
+
+            .ticket-info:nth-child(2){
+                right: 39%;
+                bottom: -10%;
+            }
+
+            .ticket-info:nth-child(3){
+                right: 15%;
+                top: 18%;
+            }
+
+            .ticket-info:nth-child(4){
+                bottom: 20%;
+                left: 0;
+            }
         }
     }
 }
