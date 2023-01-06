@@ -58,8 +58,10 @@ header{
             }
 
             .header__menu-mobile{
-
                 .header__menu-mobile__icon{
+                    display: flex;
+                    padding: .2rem;
+                    
                     label{
                         cursor: pointer;
                         width: 18px;
@@ -86,9 +88,11 @@ header{
     }
 }
 
+
 // RESPONSIVE
 @include mobile{
     header{
+        padding: $padding-wrapper-mobile;
         .container{
             .header{
                 .header__menu{

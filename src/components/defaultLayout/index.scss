@@ -3,3 +3,10 @@
 .default-layout{
     padding: $padding-wrapper-desktop;
 }
+
+// responsive
+@include mobile{
+    .default-layout{
+        padding: $padding-wrapper-mobile;
+    }
+}
