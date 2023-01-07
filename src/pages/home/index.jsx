@@ -19,7 +19,7 @@ export default function HombePage () {
                     <h1>I'm <span className="dev">Francisco Garcia</span> <br /> Full Stack Web Developer</h1>
                     <br />
                     <p>
-                      I am a web developer with a passion for creating beautiful and functional websites. I have experience building websites from scratch.
+                    I am a web developer with a passion for creating beautiful and functional websites. I have experience building websites from scratch.
                     </p>
                   </div>
                   <br />
@@ -38,7 +38,7 @@ export default function HombePage () {
 
             {/* contact me */}
             <ContactMeForm />
-
+            
         </div>
     </DefaultLayout>
   )
