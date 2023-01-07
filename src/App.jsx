@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <HombePage />
       
-    <Cursor />
+    {/* <Cursor /> */}
     </div>
   )
 }

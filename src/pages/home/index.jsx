@@ -4,6 +4,8 @@ import backgroundHome from "../../assets/img/background-home.png"
 
 // component
 import DownloadCV from '../../components/downloadCV'
+import CardMyService from '../../components/cardsMyServices'
+import ContactMeForm from '../../components/contactMeForm'
 
 export default function HombePage () {
 
@@ -17,9 +19,10 @@ export default function HombePage () {
                     <h1>I'm <span className="dev">Francisco Garcia</span> <br /> Full Stack Web Developer</h1>
                     <br />
                     <p>
-                      I am a web developer with a passion for creating beautiful and functional websites. I have experience building websites from scratch, as well as maintaining and improving existing websites.
+                      I am a web developer with a passion for creating beautiful and functional websites. I have experience building websites from scratch.
                     </p>
                   </div>
+                  <br />
                   <br />
                   {/* download cv button */}
                   <DownloadCV />
@@ -29,6 +32,13 @@ export default function HombePage () {
                 <img src={backgroundHome} alt="background-home" />
               </div>
             </div>
+
+            {/* my services */}
+            <CardMyService />
+
+            {/* contact me */}
+            <ContactMeForm />
+
         </div>
     </DefaultLayout>
   )
