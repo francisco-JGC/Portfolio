@@ -1,0 +1,232 @@
+@use '../../sass/index' as *;
+
+.contact-me{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    position: relative;
+
+    .section {
+        padding: 1rem;
+        display: flex;
+    }
+    .section__formMail{
+        width: 70%;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .title{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+            h2, i{
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $primary-color;
+            }
+
+        }
+        .name, .email{
+            width: 45%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            margin-top: 2rem;
+
+            label{
+                position: absolute;
+                margin-left: 1rem;
+                transition: all .3s ease-in-out;
+
+            }
+
+            input{
+                border: none;
+                outline: none;
+                padding: .5rem 1rem;
+                width: 100%;
+                background: none;
+                border-bottom: 2px solid $secondary-color;
+                transition: all .3s ease-in-out;
+
+                &:focus{
+                    border-bottom: 2px solid $primary-color;
+                    color: $primary-color;
+
+                    & + label{
+                        transform: translateY(-2.3rem) scale(.8) translateX(-2.1rem);
+                    }
+                }
+
+                &:valid{
+                    border-bottom: 2px solid $primary-color;
+                    color: $primary-color;
+
+                    & + label{
+                        transform: translateY(-2.3rem) scale(.8) translateX(-2.1rem);
+                    }
+                }
+
+            }
+        }
+        .message{
+            width: 70%;
+            margin: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            textarea{
+                resize: none;
+                border: none;
+                outline: none;
+                border-radius: $border-radius;
+                padding: 1rem;
+                font-size: 1rem;
+                font-weight: 400;
+                color: $primary-color;
+                transition: all .3s ease-in-out;
+                box-shadow: 0 0 0 2px $secondary-color;
+                
+
+                &:focus{
+                    box-shadow: 0 0 0 2px $primary-color;
+                }
+            }
+        }
+        
+        // button send message
+        .button__send{
+            background: none;
+            border: none;
+            outline: none;
+            display: inline;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border-radius: 50%;
+            background: $primary-color;
+            color: $white;
+            align-self: flex-end;
+            transition: all .3s ease-in-out;
+            position: relative;
+            .check{
+                display: none;
+                transform: rotate(45deg);
+                transform: scale(1.5);
+            }
+
+            // animation
+            &:hover{
+                animation: animation-button-send 1s ease-in-out infinite;
+            }
+
+            &:active{
+                animation: none;
+                transform: scale(.9);
+            }
+
+            @keyframes animation-button-send{
+                0%{
+                    transform: scale(1);
+                }
+                50%{
+                    transform: scale(1.1);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+
+            i{
+                font-size: 1.5rem;
+            }
+        }
+
+        .sending__message{
+            i{
+                transition: all .3s ease-in-out;
+                color: $primary-color;
+            }
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50%;
+                height: 50%;
+                background: $white;
+                border-radius: 50%;
+                opacity: 1;
+            }
+
+            // animation pulse
+            &::after{
+                animation: animation-pulse 1s  infinite ease-in-out;
+            }
+
+            @keyframes animation-pulse{
+                0%{
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                }
+                50%{
+                    transform: translate(-50%, -50%) scale(1.5);
+                    opacity: 0;
+                }
+                100%{
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .sent__message{
+            transition: all .3s ease-in-out;
+            .send{
+                display: none;
+            }
+            .check{
+                transition: all .3s ease-in-out;
+                display: block;
+                transform: scale(1);
+            }
+
+        }
+    }
+    .section__formContactme{
+        width: 30%;
+        background: $primary-color;
+        border-radius: 0 $border-radius $border-radius 0;
+        color: $white;
+
+        .contactme__location{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 1rem;
+            position: relative;
+
+            i{
+                font-size: 1.2rem;
+            }
+            h3{
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
