@@ -23,8 +23,9 @@ export const useContactMe = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("submitting");
-        console.log(name, email, message);
+        const button = e.target.querySelector("button");
+        button.disabled = true;
+        button.classList.add("sending__message");
         if (verifyValidEmail(email)) {
             const fields = {
                 name,
@@ -32,13 +33,27 @@ export const useContactMe = () => {
                 message,
             };
             const isEmailSent = await sendMessageEmail(fields);
+            button.classList.remove("sending__message");
+            button.classList.add("sent__message");
+
             if (isEmailSent) {
                 setName("");
                 setEmail("");
                 setMessage("");
                 setIsMessageValid(false);
             }
+
+            setTimeout(() => {
+                button.classList.remove("sent__message");
+                button.disabled = false;
+            }, 2000);
+
+            return;
         }
+
+        alert("Please enter a valid email address");
+        button.disabled = false;
+        button.classList.remove("sending__message");
     };
 
     
